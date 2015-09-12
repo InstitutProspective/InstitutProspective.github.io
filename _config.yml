@@ -1,12 +1,11 @@
 # Site settings
-title: Les projets de la Fabriques des Mobilités
+title: Institut Prospective
 email: simons@simons.fr
 description: > # this means to ignore newlines until "baseurl:"
-  La Fabrique des Mobilités est un programme d'#039;accélération de projets de startups et intraprenariat dans le domaine des transports et de la mobilités.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: fab_mob
 github_username:  fabmob
-logo: /img/fabmob-logo.png
+logo: 
 # Build settings
 markdown: kramdown

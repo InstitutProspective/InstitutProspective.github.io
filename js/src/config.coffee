@@ -2,7 +2,7 @@
     templateBaseUrl: '/views/',
     useHtml5Mode: false,
     projectSheetTemplateSlug: 'accompagnement',
-    defaultSiteTags: ['accompagnement','fabmob'],  # comma-separated list of site tags
+    defaultSiteTags: ['InstitutProspective'],  # comma-separated list of site tags
     editorialSuggestedTags : [], # list of tags suggested instead of most popular ones
     defaultResultLimit : 18, # nb of results loaded by default in projects list page
 
