@@ -14,8 +14,8 @@
 
                             <div class="boxes boxes-small boxes-projects" >
                                 <div class="box" ng-repeat="projectsheet in projectsheets">
-                                    <ng-include src="'views/catalog/block/project_thumb.html'" ng-init="project=projectsheet.project; cover=projectsheet.cover"></ng-include>
-                                </div><!-- .box -->
+                                    <ng-include src="'views/catalog/block/project_thumb.html'" ng-init="project=projectsheet.project; cover=projectsheet.cover; projectsheet=projectsheet"></ng-include>
+                                </div><!-- .box -->;
                             </div><!-- .boxes -->
 
                         </tab>

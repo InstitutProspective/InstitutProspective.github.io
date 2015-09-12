@@ -1,14 +1,12 @@
 # Site settings
-title: Your awesome title
-email: your-email@domain.com
+title: Les projets de la Fabriques des Mobilités
+email: simons@simons.fr
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  La Fabrique des Mobilités est un programme d'#039;accélération de projets de startups et intraprenariat dans le domaine des transports et de la mobilités.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
-logo: 
+twitter_username: fab_mob
+github_username:  fabmob
+logo: /img/fabmob-logo.png
 # Build settings
 markdown: kramdown

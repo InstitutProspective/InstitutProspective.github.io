@@ -1,0 +1,108 @@
+<link rel="stylesheet" href="js/vendor/ng-tags-input/ng-tags-input.min.css">
+<link rel="stylesheet" href="js/vendor/ng-tags-input/ng-tags-input.bootstrap.min.css">
+<link rel='stylesheet' href='css/textAngular.css'>
+<link rel='stylesheet' href='js/vendor/angucomplete-alt/angucomplete-alt.css'>
+<div class="admin">
+    <div class="row container">
+
+        <div class="col-md-12">
+
+            <div id="content" class="new-project">
+
+                <h2>Ajouter un commun</h2>
+                <!-- <p>Ce formulaire vous permet de décrire en détails votre projet. Tous les champs ne sont pas obligatoires et peuvent être modifiés par la suite si vous n'avez pas beaucoup de temps.<p> -->
+                <p>Ce formulaire requiert uniquement les champs minimum à l'ajout d'un projet de type "commun" identifié<br>
+                    Vous serez ensuite redirigé(e) vers la nouvelle fiche que vous pourrez enrichir en cliquant sur l'icone <span class="glyphicon glyphicon-pencil"><p>
+
+                <h3>Nouveau commun</h3>
+
+                <form name="newProjectForm" novalidate ng-controller="ImaginationProjectSheetCreateCtrl" ng-init="init(config.projectSheetTemplateSlug); submitted=false" ng-submit="saveImaginationProject(newProjectForm.$valid)" ng-class="{ 'has-error' : newProjectForm.$invalid && submitted }">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <fieldset class="fake-placeholder">
+                                <h4>Nom du commun</h4>
+                                <input type="text"
+                                       name="projectName"
+                                       ng-model="projectsheet.project.title" required/>
+                                <p ng-show="newProjectForm.projectName.$invalid && submitted" class="help-block">Nom du commun requis</p>
+                           </fieldset>
+                            <fieldset class="fake-placeholder">
+                                <h4>Résumez le commun en une courte phrase</h4>
+                                <input type="text"
+                                           name="projectBaseline"
+                                           ng-model="projectsheet.project.baseline" required/>
+                                <p ng-show="newProjectForm.projectBaseline.$invalid && submitted" class="help-block">Courte description du commun requise</p>
+                           </fieldset>
+                            <!-- <fieldset class="fake-placeholder">
+                                <div ng-controller="TagAutoCompleteCtrl">
+                                    <h4>Quels sont les mots-clés associés à votre projet ? (thématiques, type de projet, outils...)</h4>
+                                    <tags-input ng-model="tags"
+                                                placeholder="> Mot-clé">
+                                      <auto-complete source="loadTags($query)"></auto-complete>
+                                    </tags-input>
+                                </div>
+                            </fieldset> -->
+                        </div>
+                        <div class="col-md-4">
+                            <!-- <fieldset class="addPhotosVideos">
+                                <label ng-click="openGallery()">Ajouter des médias</label>
+                                <button type="button" class="addPhotos" ng-click="openGallery()">
+                                    <span class="glyphicon glyphicon-camera"></span>
+                                </button>
+                                <button  type="button" class="addVideos" ng-click="openGallery()">
+                                    <span class="glyphicon glyphicon-facetime-video"></span>
+                                </button>
+                            </fieldset>
+                            <fieldset class="phases" ng-controller="ProjectProgressCtrl" ng-init="init('imagination.social')">
+                                <p>État d'avancement</p>
+                                <label class="phase{{progress.order+1}} {{selectedClasses[progress.id]}}"
+                                       ng-repeat="progress in progressRange"
+                                       ng-click="updateProgressChoice(progress);$parent.projectsheet.project.progress=progress.resource_uri"
+                                       tooltip="{{progress.description}}">
+                                    {{progress.label}}
+                                </label>
+                            </fieldset> -->
+                        </div>
+                    </div>
+                    <!-- <fieldset class="new-project">
+                        <h4>Résumez votre projet en quelques lignes</h4>
+                        <text-angular name="project-about"
+                                      ta-toolbar="[['bold','italics', 'underline'], ['ul', 'ol'], ['insertLink']]"
+                                      ng-model="projectsheet.project.description"
+                                      e-rows="1">
+                        </text-angular>
+                    </fieldset>
+                    <fieldset class="new-project" ng-repeat="item in QAItems">
+                        <h4>{{item.questionLabel}}</h4>
+                        <div ng-if="item.choices.length > 0" class="choices">
+                            <label ng-repeat="choice in item.choices">
+                                <input type="checkbox" checklist-model="item.selected_choices_id" checklist-value="choice.id"> {{ choice.text }}
+                            </label>
+                            <h5> Vous pouvez ajouter un commentaire </h5>
+                        </div>
+                        <text-angular
+                                    ng-model="item.answer"
+                                    ta-toolbar="[['bold','italics', 'underline'], ['ul', 'ol'], ['insertLink']]"
+                                    name="question_{{$index}}"
+                                    e-rows="0">
+                        </text-angular>
+                    </fieldset> -->
+                    <p class="right">
+                        <button type="button" class="button cancel" ui-sref="project.list">Annuler</button>
+                        <!-- FIXME : set up ctrler to allow 'save as draft'  -->
+                        <!-- <button type="button" class="button">Enregistrer</button> -->
+                        <button type="button" class="button" ng-click="submitted=true">Publier</button>
+                        <!-- <button type="submit" class="button" ng-click="submitted=true">Enregistrer</button> -->
+                    </p>
+                    <!-- <div class="progress">
+                        <div class="progress-bar" role="progressbar" ng-style="{ 'width': uploader.progress + '%' }" style="width: 0%;"></div>
+                    </div> -->
+                </form>
+
+            </div><!-- #content -->
+
+        </div><!-- .row -->
+
+    </div><!-- .row .container -->
+
+</div><!-- .container-fluid -->
