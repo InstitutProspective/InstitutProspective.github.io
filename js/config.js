@@ -4,7 +4,7 @@
     templateBaseUrl: '/views/',
     useHtml5Mode: false,
     projectSheetTemplateSlug: 'accompagnement',
-    defaultSiteTags: ['InstitutProspective'],
+    defaultSiteTags: ['institutprospective'],
     editorialSuggestedTags: [],
     defaultResultLimit: 18,
     bucket_uri: 'http://data.patapouf.org/bucket/upload/',
